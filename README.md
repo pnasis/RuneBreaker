@@ -1,4 +1,4 @@
-# Rune Decryptor corpus builder
+# RuneBreaker corpus builder
 
 This folder contains a helper that creates the language-model `.txt` files
 used by `runebreaker.py`.
