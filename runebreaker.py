@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Rune Decryptor helper: multilingual monoalphabetic substitution solver.
+"""RuneBreaker: multilingual monoalphabetic substitution solver.
 
 Supports: de, en, es, fr, grc, it, la, nl, ru, sv
 
 Usage:
-  python rune_decryptor.py analyze cipher.txt
-  python rune_decryptor.py solve cipher.txt --corpora corpora --top 5
-  python rune_decryptor.py solve cipher.txt --language sv --corpora corpora
-  python rune_decryptor.py nearby cipher.txt mapping.json --corpora corpora --correct 18 --total 20
+  python runebreaker.py analyze cipher.txt
+  python runebreaker.py solve cipher.txt --corpora corpora --top 5
+  python runebreaker.py solve cipher.txt --language sv --corpora corpora
+  python runebreaker.py nearby cipher.txt mapping.json --corpora corpora --correct 18 --total 20
 
 For best results, create corpora/en.txt, corpora/de.txt, ... corpora/grc.txt
 with a few MB of representative public-domain prose per language.
@@ -256,4 +256,5 @@ def main():
     scored.sort(key=lambda r:r.score,reverse=True)
     for r in scored[:args.top]: print_result(r)
 
-if __name__=='__main__': main()
+if __name__=='__main__':
+    main()
